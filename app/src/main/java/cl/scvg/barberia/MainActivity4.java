@@ -2,10 +2,14 @@ package cl.scvg.barberia;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.ListView;
 import android.widget.TimePicker;
 
 import androidx.activity.EdgeToEdge;
@@ -18,15 +22,21 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+
 import cl.scvg.barberia.clases.Cita;
 import cl.scvg.barberia.clases.Peluquero;
 
 public class MainActivity4 extends AppCompatActivity {
 
-    CalendarView calendarView;
-    //TimePicker timePicker;
+
     Button guardar;
+    ListView lvHora, lvDia;
     String lugar, trabajador,fecha,hora;
+
+    ArrayList<String> listHora = new ArrayList<>();
+    ArrayList<String> listDia = new ArrayList<>();
+
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -44,32 +54,54 @@ public class MainActivity4 extends AppCompatActivity {
         trabajador = intent.getStringExtra("peluquero");
 
 
-        calendarView = findViewById(R.id.calendario);
-        //timePicker = findViewById(R.id.timePicker);
+
         guardar = findViewById(R.id.buttonGuardar);
+        lvDia=findViewById(R.id.lv_DIA);
+        lvHora=findViewById(R.id.lv_HORA);
 
         inicializarFireBase();
 
+        listDia.add("LUNES");
+        listDia.add("MARTES");
+        listDia.add("MIERCOLES");
+        listDia.add("JUEVES");
+        listDia.add("VIERNES");
+        listDia.add("SABADO");
 
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+        listHora.add("12:30");
+        listHora.add("13:00");
+        listHora.add("13:30");
+        listHora.add("14:00");
+
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,listHora);
+        lvHora.setAdapter(adapter);
+
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,listDia);
+        lvDia.setAdapter(adapter2);
+
+        lvHora.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                // La fecha seleccionada
-                fecha = dayOfMonth + "/" + (month + 1) + "/" + year;
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Obtiene el elemento seleccionado
+                hora = listHora.get(position);
+
+
+
+            }
+        });
+        lvDia.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Obtiene el elemento seleccionado
+                fecha = listDia.get(position);
 
 
 
             }
         });
 
-        /*timePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
-            @Override
-            public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
-                // Formatea la hora seleccionada
-                hora = String.format("%02d:%02d", hourOfDay, minute);
 
-            }
-        });*/
 
 
 
@@ -116,6 +148,9 @@ public class MainActivity4 extends AppCompatActivity {
 
 
     }
+
+
+
 
     private void inicializarFireBase(){
         FirebaseApp.initializeApp(this);

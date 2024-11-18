@@ -88,17 +88,17 @@ public class MainActivity3 extends AppCompatActivity {
             }
         });
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent_HORARIO = new Intent(MainActivity3.this, MainActivity4.class);
+                Intent intent_HORARIO2 = new Intent(MainActivity3.this, MainActivity4.class);
 
-                intent_HORARIO.putExtra("peluquero",nombre2);
-                intent_HORARIO.putExtra("direccion",DIREC);
+                intent_HORARIO2.putExtra("peluquero",nombre2);
+                intent_HORARIO2.putExtra("direccion",DIREC);
 
 
-                startActivity(intent_HORARIO);
+                startActivity(intent_HORARIO2);
 
             }
         });
