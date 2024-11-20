@@ -28,7 +28,7 @@ public class MainActivitymenu extends AppCompatActivity {
         Intent intent = getIntent();
 
         id_cita = intent.getStringExtra("id");
-        secondFragment = SecondFragment.newInstance(id_cita);
+        fourFragment = fourFragment.newInstance(id_cita);
 
         BottomNavigationView navigation = findViewById(R.id.bottom_navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);

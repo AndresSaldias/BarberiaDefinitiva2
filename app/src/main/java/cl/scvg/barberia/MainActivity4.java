@@ -23,6 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import cl.scvg.barberia.clases.Cita;
 import cl.scvg.barberia.clases.Peluquero;
@@ -33,6 +34,7 @@ public class MainActivity4 extends AppCompatActivity {
     Button guardar;
     ListView lvHora, lvDia;
     String lugar, trabajador,fecha,hora;
+    Random random = new Random();
 
     ArrayList<String> listHora = new ArrayList<>();
     ArrayList<String> listDia = new ArrayList<>();
@@ -111,7 +113,7 @@ public class MainActivity4 extends AppCompatActivity {
 
                 //id deberia ser algo ligado al inicio de sesion
                 //pa que no de error
-                String id = "33333";
+                String id = String.valueOf(random.nextInt(100));
                 postCita(id,trabajador,lugar,fecha,hora);
 
                 Intent intent_lista = new Intent(MainActivity4.this, MainActivitymenu.class);
