@@ -20,6 +20,10 @@
             android:name=".MainActivitymenu"
             android:exported="false" />
         <activity
+            android:name=".MainActivitySplash"
+            android:exported="false" />
+
+        <activity
             android:name=".MainActivity4"
             android:exported="false" />
         <activity

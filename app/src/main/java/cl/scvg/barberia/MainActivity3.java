@@ -34,7 +34,7 @@ public class MainActivity3 extends AppCompatActivity {
     Button btn1,btn2;
     TextView tv1,tv2;
     String DIREC,codex,nombre1,nombre2;
-    ListView lvLista;
+
     //lista para tener los datos de los peluqueros
 
     private List<Peluquero> listPelo = new ArrayList<Peluquero>();
@@ -64,7 +64,7 @@ public class MainActivity3 extends AppCompatActivity {
 
         tv1 =findViewById(R.id.TVa);
         tv2 =findViewById(R.id.TVb);
-        lvLista=findViewById(R.id.LvLista);
+
 
         inicializarFireBase();
 
@@ -146,7 +146,7 @@ y se mantienen en un array para asignar la id correspondiente en una variable pr
 
                     ListProb.add("dato 1: " + pelo.getID()+" dato2: "+ pelo.getNombre() + " dato 3"+pelo.getCodigo()+"     "+codex);
                     arrayAdapterString = new ArrayAdapter<>(MainActivity3.this, android.R.layout.simple_list_item_1,ListProb);
-                    lvLista.setAdapter(arrayAdapterString);
+
 
                     //if(DIREC.equals(codex)){
 

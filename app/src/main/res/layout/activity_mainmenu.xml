@@ -7,12 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivitymenu">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:background="#8B0006">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        android:layout_marginTop="-2dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+    </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -28,6 +40,8 @@
         style="@style/BottomNavigation"
         app:itemBackground="@null"
         app:itemRippleColor="@android:color/transparent"
-        />
+        >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </RelativeLayout>

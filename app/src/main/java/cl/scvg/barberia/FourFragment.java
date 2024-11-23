@@ -101,7 +101,7 @@ this fragment using the provided parameters.*
         inicializarFirebase();
 
         // Llamar al método para cargar la cita por ID
-        cargarCitaPorID(id); // Aquí reemplaza "33333" por el ID de la cita que deseas mostrar
+        cargarCitaPorID("33333"); // Aquí reemplaza "33333" por el ID de la cita que deseas mostrar
 
         // Crear y asignar el adaptador
         adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, ListCita);

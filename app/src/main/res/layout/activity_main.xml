@@ -5,56 +5,117 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/flecha_izquierda"
+    android:backgroundTint="@color/white"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="395dp"
-        android:layout_height="638dp"
+        android:layout_width="458dp"
+        android:layout_height="954dp"
+        android:background="#F6F3F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.494">
 
-        <Button
-            android:id="@+id/bt5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="531dp"
+            android:layout_height="6dp"
+            android:background="#141313"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.032"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.972" />
+            app:layout_constraintVertical_bias="0.402">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="555dp"
+            android:layout_height="8dp"
+            android:background="#141313"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.463"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.26">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="537dp"
+            android:layout_height="7dp"
+            android:background="#141313"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.136"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.122">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/bt5"
+            android:layout_width="145dp"
+            android:layout_height="81dp"
+            android:backgroundTint="#8B0006"
+            android:text="CONTINUAR"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.749" />
 
         <Button
             android:id="@+id/bt2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button"
+            style="@style/Widget.Material3.Button.IconButton.Filled"
+            android:layout_width="620dp"
+            android:layout_height="126dp"
+            android:backgroundTint="@color/white"
+            android:singleLine="false"
+            android:text="Sucursal Isabel Riquelme - Isabel Riquelme 579, Chillán, Ñuble"
+            android:textColor="@color/black"
+            android:textColorHighlight="#EFE7E7"
+            android:textColorHint="#000000"
+            android:textColorLink="#A66060"
+            android:textSize="14sp"
             app:layout_constraintBottom_toTopOf="@+id/bt5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.884"
+            app:layout_constraintHorizontal_bias="0.592"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.385" />
+            app:layout_constraintVertical_bias="0.465" />
 
         <Button
             android:id="@+id/bt1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button"
+            style="@style/Widget.Material3.Button.IconButton.Filled"
+            android:layout_width="616dp"
+            android:layout_height="114dp"
+            android:backgroundTint="@color/white"
+            android:text="Sucursal Libertad - Biobío - Av. Libertad 786, Chillán, Ñuble"
+            android:textColor="@color/black"
+            android:textColorHighlight="#0F0E0E"
+            android:textColorHint="#000000"
+            android:textColorLink="#A66060"
+            android:textSize="14sp"
             app:layout_constraintBottom_toTopOf="@+id/bt5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.884"
+            app:layout_constraintHorizontal_bias="0.586"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.127" />
+            app:layout_constraintVertical_bias="0.226" />
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.063"
@@ -62,17 +123,59 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.862" />
 
-        <Button
-            android:id="@+id/buttonRegreso"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="IrAFragment"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="525dp"
+            android:layout_height="100dp"
+            android:background="#8B0006"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.093"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.227" />
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ELIGE UNA SUCURSAL"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#000000"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.572"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="526dp"
+            android:layout_height="97dp"
+            android:background="#8B0006"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+
+            <android.widget.Button
+                android:id="@+id/buttonRegreso"
+                style="@style/Widget.Material3.Button.IconButton.Filled"
+                android:layout_width="74dp"
+                android:layout_height="57dp"
+                android:background="@drawable/flecha_izquierda"
+                android:backgroundTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

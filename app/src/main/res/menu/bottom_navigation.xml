@@ -4,24 +4,24 @@
     android:id="@+id/firstFragment"
 
     android:icon="@drawable/hogar"
-    android:title="Primero"
+    android:title="INICIO"
 
     />
     <item
         android:id="@+id/secondFragment"
         android:icon="@drawable/calendario"
-        android:title="Segundo"
+        android:title="CITA"
 
         />
     <item
         android:id="@+id/thirdFragment"
         android:icon="@drawable/sobre"
-        android:title="Tercero"
+        android:title="MENSAJES"
       />
     <item
         android:id="@+id/fourFragment"
         android:icon="@drawable/ajustes"
-        android:title="Cuarto"
+        android:title="AJUSTES"
      />
 
 

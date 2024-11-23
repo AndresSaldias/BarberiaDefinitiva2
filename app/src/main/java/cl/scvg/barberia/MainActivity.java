@@ -96,7 +96,7 @@ en este boton se pasa a la otra pantalla y se pasa el dato con el intent pero no
 
 
 
-                 Intent intent5 = new Intent(MainActivity.this, MainActivitymenu.class);
+                Intent intent5 = new Intent(MainActivity.this, MainActivitymenu.class);
 
                 intent5.putExtra("direcciono",nombre2);
 

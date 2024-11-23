@@ -103,7 +103,7 @@ public class Login extends AppCompatActivity {
                         FirebaseUser user = auth.getCurrentUser();
                         if (user != null) {
                             // Redirigir a otra actividad después del login exitoso
-                            Intent intent = new Intent(this, MainActivitymenu.class); // Cambia HomeActivity por el nombre de tu siguiente actividad
+                            Intent intent = new Intent(this, MainActivitySplash.class); // Cambia HomeActivity por el nombre de tu siguiente actividad
                             startActivity(intent);
                             finish(); // Finaliza la actividad actual para que el usuario no vuelva atrás
                         }

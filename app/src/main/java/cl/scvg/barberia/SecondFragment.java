@@ -90,7 +90,7 @@ public class SecondFragment extends Fragment {
         btMapa = view.findViewById(R.id.btMapas);
 
         //datos = view.findViewById(R.id.textViewDATOS);
-        TextView datos = view.findViewById(R.id.textViewDATOS);
+
         if (id_cita != null) {
             datos.setText(id_cita); // Mostrar el valor en el TextView
         }

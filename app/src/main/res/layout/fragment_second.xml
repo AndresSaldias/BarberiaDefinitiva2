@@ -10,51 +10,69 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/textViewDATOS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5" />
+        android:layout_height="655dp">
 
         <Button
             android:id="@+id/buttonViaje"
-            android:layout_width="123dp"
-            android:layout_height="61dp"
-            android:text="Viajar"
+            android:layout_width="204dp"
+            android:layout_height="87dp"
+            android:backgroundTint="#8B0006"
+            android:text="Pide Tu Cita"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.531"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.309" />
+            app:layout_constraintVertical_bias="0.614" />
 
         <Button
             android:id="@+id/btMapas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mapas"
+            android:layout_width="205dp"
+            android:layout_height="90dp"
+            android:backgroundTint="#8B0006"
+            android:text="Cómo LLegar"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#8B0006"
+            android:textColorLink="#8B0006"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewDATOS" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.785"
+            app:strokeColor="#D13434" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="307dp"
+            android:layout_height="166dp"
+            android:background="@drawable/barbaros_logo_transparente"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="195dp"
+            android:layout_height="52dp"
             android:fontFamily="sans-serif-black"
             android:gravity="center_horizontal"
-            android:text="Segundo Fragmento"
-            android:textColor="@color/green_normal"
+            android:text="INICIO"
+            android:textColor="@color/white"
             android:textSize="40sp"
-            tools:layout_editor_absoluteX="-17dp"
-            tools:layout_editor_absoluteY="31dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.026" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
