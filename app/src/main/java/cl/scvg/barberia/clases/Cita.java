@@ -4,23 +4,27 @@ public class Cita {
 
     private String ID;
     private String peluquero;
+    private String servicio;
     private String lugar;
     private String fecha;
     private String hora;
 
     public Cita() {
         this.ID = ID;
+        this.servicio = servicio;
         this.peluquero = peluquero;
         this.lugar = lugar;
         this.fecha = fecha;
         this.hora = hora;
     }
 
-    public Cita(String ID, String peluquero, String lugar,String fecha) {
+    public Cita(String ID,String servicio ,String peluquero, String lugar,String fecha, String hora) {
         this.ID = ID;
+        this.servicio = servicio;
         this.peluquero = peluquero;
         this.lugar = lugar;
         this.fecha = fecha;
+        this.hora = hora;
     }
 
     public String getID() {
@@ -63,11 +67,20 @@ public class Cita {
         this.hora = hora;
     }
 
+    public String getServicio() {
+        return servicio;
+    }
+
+    public void setServicio(String servicio) {
+        this.servicio = servicio;
+    }
+
     @Override
     public String toString() {
         return "Cita{" +
                 "ID='" + ID + '\'' +
                 ", peluquero='" + peluquero + '\'' +
+                ", servicio='" + servicio + '\'' +
                 ", lugar='" + lugar + '\'' +
                 ", fecha='" + fecha + '\'' +
                 ", hora='" + hora + '\'' +

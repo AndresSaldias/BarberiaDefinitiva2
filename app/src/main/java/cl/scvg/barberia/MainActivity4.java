@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.ListView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,7 +34,7 @@ public class MainActivity4 extends AppCompatActivity {
 
     Button guardar;
     ListView lvHora, lvDia;
-    String lugar, trabajador,fecha,hora;
+    String lugar, trabajador,fecha,hora,servicio;
     Random random = new Random();
 
     ArrayList<String> listHora = new ArrayList<>();
@@ -51,6 +52,8 @@ public class MainActivity4 extends AppCompatActivity {
         setContentView(R.layout.activity_main4);
 
         Intent intent = getIntent();
+
+        servicio=intent.getStringExtra("servicio");
 
         lugar = intent.getStringExtra("direccion");
         trabajador = intent.getStringExtra("peluquero");
@@ -114,11 +117,12 @@ public class MainActivity4 extends AppCompatActivity {
                 //id deberia ser algo ligado al inicio de sesion
                 //pa que no de error
                 String id = String.valueOf(random.nextInt(100));
-                postCita(id,trabajador,lugar,fecha,hora);
+                postCita(id,servicio,trabajador,lugar,fecha,hora);
 
                 Intent intent_lista = new Intent(MainActivity4.this, MainActivitymenu.class);
 
                 intent_lista.putExtra("id",id);
+                Toast.makeText(getApplicationContext(), "Su cita a sido agendada correctamente", Toast.LENGTH_SHORT).show();
 
 
                 startActivity(intent_lista);
@@ -135,11 +139,12 @@ public class MainActivity4 extends AppCompatActivity {
         });
     }
 
-    private void postCita(String id, String peluquero, String lugar,String dates,String horas) {
+    private void postCita(String id,String servicio ,String peluquero, String lugar,String dates,String horas) {
 
         Cita cita = new Cita();
 
         cita.setID(id);
+        cita.setServicio(servicio);
         cita.setPeluquero(peluquero);
         cita.setLugar(lugar);
         cita.setFecha(dates);

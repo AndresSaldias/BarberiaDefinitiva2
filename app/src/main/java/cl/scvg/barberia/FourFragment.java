@@ -101,7 +101,19 @@ this fragment using the provided parameters.*
         inicializarFirebase();
 
         // Llamar al método para cargar la cita por ID
-        cargarCitaPorID("33333"); // Aquí reemplaza "33333" por el ID de la cita que deseas mostrar
+        try {
+            cargarCitaPorID(id);
+
+        }catch(Exception e){
+
+            String citaTexto = "servicio: No tiene aún "  + "\n" +
+                    "Peluquero: No tiene aún" + "\n" +
+                    "Lugar: No tiene aún"  + "\n" +
+                    "Fecha: No tiene aún"  + "\n" +
+                    "Hora: No tiene aún" ;
+            ListCita.add(citaTexto);
+        }
+
 
         // Crear y asignar el adaptador
         adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, ListCita);
@@ -128,14 +140,16 @@ this fragment using the provided parameters.*
                     Cita cita = dataSnapshot.getValue(Cita.class);
                     if (cita != null) {
                         // Si el ID de la cita coincide con el ID buscado, agregar la cita a la lista
-                        String citaTexto = "ID: " + cita.getID() + "\n" +
+                        String citaTexto = "servicio: " + cita.getServicio() + "\n" +
                                 "Peluquero: " + cita.getPeluquero() + "\n" +
                                 "Lugar: " + cita.getLugar() + "\n" +
                                 "Fecha: " + cita.getFecha() + "\n" +
                                 "Hora: " + cita.getHora();
                         ListCita.add(citaTexto);
+
                     }
-                } else {
+                } else
+                {
                     Toast.makeText(getContext(), "No se encontró una cita con ID: " + idCita, Toast.LENGTH_SHORT).show();
                 }
 

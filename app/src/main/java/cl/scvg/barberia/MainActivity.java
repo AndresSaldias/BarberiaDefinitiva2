@@ -62,13 +62,13 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nombre = "ZZ";
+                nombre = "Sucursal Libertad - Biobío - Av. Libertad 786, Chillán, Ñuble";
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nombre = "FF";
+                nombre = "Sucursal Isabel Riquelme - Isabel Riquelme 579, Chillán, Ñuble";
             }
         });
 /*
@@ -81,7 +81,7 @@ en este boton se pasa a la otra pantalla y se pasa el dato con el intent pero no
 
                 tv1.setText(nombre);
 
-                Intent intent = new Intent(MainActivity.this, MainActivity3.class);
+                Intent intent = new Intent(MainActivity.this, MainActivity5.class);
 
                 intent.putExtra("direccion",nombre);
 

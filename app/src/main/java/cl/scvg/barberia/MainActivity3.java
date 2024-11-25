@@ -33,7 +33,7 @@ public class MainActivity3 extends AppCompatActivity {
 
     Button btn1,btn2;
     TextView tv1,tv2;
-    String DIREC,codex,nombre1,nombre2;
+    String DIREC,codex,nombre1,nombre2,servicio;
 
     //lista para tener los datos de los peluqueros
 
@@ -57,6 +57,7 @@ public class MainActivity3 extends AppCompatActivity {
         Intent intent = getIntent();
 
         DIREC = intent.getStringExtra("direccion");
+        servicio =intent.getStringExtra("servicio");
 
 
         btn1 =findViewById(R.id.btnA1);
@@ -81,6 +82,7 @@ public class MainActivity3 extends AppCompatActivity {
 
                 intent_HORARIO.putExtra("peluquero",nombre1);
                 intent_HORARIO.putExtra("direccion",DIREC);
+                intent_HORARIO.putExtra("servicio",servicio);
 
 
                 startActivity(intent_HORARIO);
@@ -96,6 +98,7 @@ public class MainActivity3 extends AppCompatActivity {
 
                 intent_HORARIO2.putExtra("peluquero",nombre2);
                 intent_HORARIO2.putExtra("direccion",DIREC);
+                intent_HORARIO2.putExtra("servicio",servicio);
 
 
                 startActivity(intent_HORARIO2);
@@ -112,17 +115,17 @@ public class MainActivity3 extends AppCompatActivity {
             return insets;
         });
     }
-/*
-aqui estaria el meoyo(meollo?)
+    /*
+    aqui estaria el meoyo(meollo?)
 
 
-aqui se recorreria la base de datos (probar como en el programa anterior)
+    aqui se recorreria la base de datos (probar como en el programa anterior)
 
-de esta forma se lograria encontrar a los peluqueros atraves de la direccion
-se usarian los nombres para rellenar los text view
+    de esta forma se lograria encontrar a los peluqueros atraves de la direccion
+    se usarian los nombres para rellenar los text view
 
-y se mantienen en un array para asignar la id correspondiente en una variable pra con los botones llevarla a otra pantalla....
- */
+    y se mantienen en un array para asignar la id correspondiente en una variable pra con los botones llevarla a otra pantalla....
+     */
     private void asignar() {
 
         databaseReference.child("Peluquero").addValueEventListener(new ValueEventListener() {
